@@ -18,9 +18,9 @@ packer = Artifact.registerArtifact(
 )
 
 experiments_repo = Artifact.registerArtifact(
-    command = 'git clone https://github.com/darchr/gem5art-experiments.git',
+    command = 'git clone https://github.com/vishalsh94/parsec-tests.git',
     typ = 'git repo',
-    name = 'parsec_tests',
+    name = 'parsec-tests',
     path =  './',
     cwd = '../',
     documentation = 'main repo to run parsec tests with gem5'
@@ -109,7 +109,7 @@ linux_binary = Artifact.registerArtifact(
 
 
 if __name__ == "__main__":
-    num_cpus = ['1']
+    num_cpus = ['16']
     benchmarks = ['blackscholes', 'bodytrack', 'canneal', 'dedup','facesim', 'ferret', 'fluidanimate', 'freqmine', 'raytrace', 'streamcluster', 'swaptions', 'vips', 'x264']
 
     sizes = ['simsmall', 'simlarge', 'native']
@@ -122,7 +122,7 @@ if __name__ == "__main__":
                     continue
                 for bm in benchmarks:
                     run = gem5Run.createFSRun(
-                        'parsec_tests',    
+                        'parsec-tests',    
                         'gem5/build/X86/gem5.opt',
                         'configs-parsec-tests/run_parsec.py',
                         f'''results/run_parsec/{bm}/{size}/{cpu}/{num_cpu}''',
