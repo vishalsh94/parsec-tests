@@ -1,0 +1,14 @@
+*.pyc
+m5out
+.vscode
+results
+venv
+disk-image/packer
+disk-image/packer_1.4.3_linux_amd64.zip
+disk-image/parsec/parsec-image/parsec
+disk-image/parsec/
+disk-image/parsec-benchmark/
+disk-image/packer_cache
+gem5
+linux-stable/
+mongo_db/
