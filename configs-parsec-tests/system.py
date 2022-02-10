@@ -79,7 +79,7 @@ class MySystem(LinuxX86System):
 
         self.setDiskImages(disk, disk)
 
-	if opts.second_disk:
+        if opts.second_disk:
             self.setDiskImages(disk, opts.second_disk)
         else:
             self.setDiskImages(disk, disk)
